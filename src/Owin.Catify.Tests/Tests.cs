@@ -26,7 +26,7 @@ namespace Owin.Catify.Tests
 		{
 			return TestServer.Create(builder => 
 				builder
-				.Use<CatifyMiddleware>("ABCD")
+				.UseCatify()
 				.Run(ctx => ctx.Response.WriteAsync("<html><head></head><body><img src=\"../../img/dog.png\"></body></html>"))).HttpClient;
 		}
 	}

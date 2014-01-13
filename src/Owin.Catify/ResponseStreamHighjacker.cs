@@ -1,7 +1,6 @@
 ﻿using System.IO;
 using System.Text;
-
-using CsQuery;
+using System.Text.RegularExpressions;
 
 namespace Owin.Catify
 {
@@ -10,6 +9,7 @@ namespace Owin.Catify
     /// </summary>
     public class ImgSrcHighjackerStream : Stream
     {
+        public static readonly Regex Regex = new Regex("(<img.+?src=[\"'])(.+?)([\"'].*?>)", RegexOptions.IgnoreCase | RegexOptions.Compiled);
         public string ImgSrc { get; set; }
         private Stream OutputStream { get; set; }
         private Encoding ContentEncoding { get; set; }
@@ -70,7 +70,7 @@ namespace Owin.Catify
         public override void Write(byte[] buffer, int offset, int count)
         {
             string contentInBuffer = ContentEncoding.GetString(buffer, offset, count);
-            contentInBuffer = CQ.Create(contentInBuffer).Select("img").AttrSet(new { src = ImgSrc }).Render();
+            contentInBuffer = Regex.Replace(contentInBuffer, m => m.Groups[1].Value + ImgSrc + m.Groups[3].Value);
             WriteToOutputStream(contentInBuffer);
         }
 

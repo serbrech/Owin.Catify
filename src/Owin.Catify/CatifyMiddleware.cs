@@ -10,7 +10,7 @@ namespace Owin.Catify
     {
         public static IAppBuilder UseCatify(this IAppBuilder appBuilder, string apikey = null)
         {
-            return string.IsNullOrWhiteSpace(apikey)
+            return !string.IsNullOrWhiteSpace(apikey)
                 ? appBuilder.Use<CatifyMiddleware>(apikey)
                 : appBuilder.Use<CatifyMiddleware>();
         }
