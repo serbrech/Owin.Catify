@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Owin.Catify")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Owin middleware to make your webpages look cuter. This might dramatically increase the traffic and pageviews on your website.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Aktiv Kapital")]
+[assembly: AssemblyCompany("Stephane Erbrech")]
 [assembly: AssemblyProduct("Owin.Catify")]
-[assembly: AssemblyCopyright("Copyright © Aktiv Kapital 2014")]
+[assembly: AssemblyCopyright("Copyright © Stephane Erbrech 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

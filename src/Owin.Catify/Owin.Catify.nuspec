@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+
+    <projectUrl>http://github.com/serbrech/Owin.Catify</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014 Stephane Erbrech</copyright>
+    <tags>owin middleware images catify web</tags>
+  </metadata>
+  <files>
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
+  </files>
+</package>
