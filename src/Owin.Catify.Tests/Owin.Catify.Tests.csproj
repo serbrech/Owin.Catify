@@ -57,12 +57,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Runtime">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.6\lib\net40\System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.6\lib\net40\System.Threading.Tasks.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Owin.Catify\Owin.Catify.csproj">
-      <Project>{c0624a42-19f1-4e81-9203-bb61b40d5e77}</Project>
+      <Project>{C0624A42-19F1-4E81-9203-BB61B40D5E77}</Project>
       <Name>Owin.Catify</Name>
     </ProjectReference>
   </ItemGroup>

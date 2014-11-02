@@ -7,14 +7,14 @@ namespace Owin.Catify
     /// <summary>
     /// This implementation is inspired by the awesome Glimpse project.
     /// </summary>
-    public class ImgSrcHighjackerStream : Stream
+    internal class ImageSourceHighjackerStream : Stream
     {
         public static readonly Regex Regex = new Regex("(<img.+?src=[\"'])(.+?)([\"'].*?>)", RegexOptions.IgnoreCase | RegexOptions.Compiled);
         public string ImgSrc { get; set; }
         private Stream OutputStream { get; set; }
         private Encoding ContentEncoding { get; set; }
 
-        public ImgSrcHighjackerStream(string imgSrc, Stream outputStream, Encoding contentEncoding)
+        public ImageSourceHighjackerStream(string imgSrc, Stream outputStream, Encoding contentEncoding)
         {
             ImgSrc = imgSrc;
             OutputStream = outputStream;
